@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="portfolio.css">
+    <script src="https://kit.fontawesome.com/6a67f8e5e9.js" crossorigin="anonymous"></script>
+</head>
+<body >
+   
+    <div id="entete">
+        <div class="conteneur ">
+            <nav class="navbarre">
+                <a href="#" class="Portfolio">Diarra</a>
+                <div class="nav-links">
+                    <ul class="navlist">
+                        <li><a href="#entete">Accueil</a></li>
+                        <li><a href="#apropos">À propos de moi</a></li>
+                        <li><a href="#projets">Mes projets</a></li>
+                         <li><a href="#exp">Expériences</a></li>  
+                        <li><a href="#contact">Contact</a></li>  
+                    </ul>
+                </div>
+            </nav>
+            <div class="texte-entete">
+                <p>Etudiant en informatique</p>
+                <h1>Bonjour,</h1>
+                <h1>Je m'appelle <span>Diarra Konte</span></h1>
+            </div>
+            
+        </div>
+    </div>
+
+
+<!------a propos de moi------>
+    <section class="apropos"  id="apropos">
+        <h1 class="TITREAPROPOS">À propos de moi</h1>
+        <div class="conteneur ">
+                <div class="apcol2">
+                    
+                    <P class="description"> Je suis actuellement étudiant en BUT Informatique à l'université <a href="https://www.univ-spn.fr" target="_blank" class="Sorbonne">Sorbonne Paris Nord</a>.</P>
+                    <button onclick="togglepopupMOI()">Afficher plus</button>
+
+                    <div class="overlayMOI">
+                        <div class="contenupopup">
+                            <p>
+                                Ma curiosité m'a toujours poussé à me poser des questions sur la conception et le développement des systèmes informatiques, ainsi que sur la création de certains jeux et applications. 
+                                Après une année de recherche en terminal pour décider dans quels domaines je voudrais étudier dans l’enseignement supérieur, j’ai finalement décidé de me lancer dans des études d’informatique, 
+                                plus précisément dans le développement web et des applications. J'aime particulièrement tout ce qui touche au développement web et mobile. Ce qui m'attire le plus, c'est la possibilité de transformer 
+                                des idées en projets concrets, qu'il s'agisse de sites web interactifs ou d'applications mobiles pratiques.
+                            </p>
+                            <p>
+                                J'apprécie particulièrement le processus de conception, de codage, et de voir le produit final prendre vie à l'écran. Je sens que je suis parti de rien et que mon travail prend forme. 
+                                Créer quelque chose de visuel et d'interactif, que les utilisateurs trouvent utiles et qu’ils utilisent quotidiennement, est extrêmement gratifiant pour moi.
+                            </p>
+                            <a href="javascript:void(0)" onclick="togglepopupMOI()"  class="popupsortir ">Fermer</a>
+                        </div>
+                    </div>
+
+                    <div class="titre">
+                        <p class="Titre-lien lien-actif" onclick="ouvrirTitre('Parcours')">Parcours</p>
+                        <p class="Titre-lien " onclick="ouvrirTitre('Qualités')">Qualités</p>
+                        <p class="Titre-lien " onclick="ouvrirTitre('Compétences')">Compétences</p>
+                    </div>
+
+                    <div class="contenu-titre contenu-actif" id="Parcours">
+                        <ul>
+                            <li><span class="P-span">2016-2020 (Epinay-sur-Seine)</span>
+                            <br><span class="Second-span">Collège Claude Monet</span></li>
+
+                            <li><span class="P-span">2020-2023 (Argenteuil)</span>
+                                <br><span class="Second-span">Lycée Julie-Victoire Daubé<br>Générale Spécialite : Mathematiques - Physique-Chimie</span></li>
+
+                            <li><span class="P-span">2023- Actuellement (Villetaneuse)</span><br>
+                                <span class="Second-span">Université Sorbonne Paris Nord</span></li>
+                            
+                        </ul>
+                    </div>
+
+                    <div class="contenu-titre " id="Qualités">
+                        <h2>Mes Qualités</h2>
+                        <ul>
+                            <li><span class="Second-span">Curieux</span> : J’ai toujours eu envie de découvrir de nouvelles choses, accroître mes connaissances.</li>
+                            <li><span class="Second-span">Créatif</span> : Capacité à imaginer et développer des solutions innovantes.</li>
+                            <li><span class="Second-span">Adaptabilité</span> : Facilité à m'adapter aux nouvelles situations et problèmes.</li>
+                            <li><span class="Second-span">Attention au détail</span> : J’aime être minutieux sur mon travail pour le rendre aussi solide que possible.</li>
+                            <li><span class="Second-span">Sociable</span> : Je suis à l’aise avec les autres, ce qui me permet de m’entendre avec mon équipe et d’être donc plus efficace.</li>
+                            <li><span class="Second-span">Capacité à travailler en équipe</span> : Je communique aisément et de manière claire, ce qui facilite la collaboration et l’adaptation dans une équipe.</li>
+                            <li><span class="Second-span">Autonomie</span> : Je n’ai pas besoin d’être toujours encadré. Je sais travailler de manière indépendante, autonome et organiser mon temps.</li>
+                        </ul>
+                    </div>
+
+                    <div class="contenu-titre" id="Compétences">
+                        <ul>
+                            <li><span class="Second-span">Programmation :</span> Je suis en pleine apprentissage des langages comme Python, JavaScript (JQUERY), HTML/CSS, PHP, PostgreSQL et MySQL.</li>
+                            <li><span class="Second-span">Développement web :</span> Je consolide mes acquis en création de sites web.</li>
+                            <li><span class="Second-span">Gestion de projets :</span> Je suis capable de planifier, organiser et diriger des projets informatiques.</li>
+                            <li><span class="Second-span">Résolution de problèmes :</span> Mes compétences analytiques, développées en mathématiques et sciences, m'aident à résoudre des problèmes efficacement.</li>
+                            <li><span class="Second-span">Veille technologique :</span> Je me tiens constamment informé des nouvelles tendances et technologies en informatique.</li>
+                            <li><span class="Second-span">Compétences en UX/UI :</span> Je sais concevoir des interfaces utilisateur intuitives et esthétiques à l'aide d'outils comme Wordpress, FIGMA et WIX.</li>
+                        </ul>
+                    </div>
+                    
+
+                </div>
+            
+        </div>
+    </section>
+
+<!-------------Mes Projets-->
+    <section id="projets" id="projets">
+        <h1 class="Projet-Titre ">Mes projets</h1>
+        <div class="conteneur">
+            <div class="liste-projet">
+                <div>
+                    <h2>24H de l'Informatique</h2>
+                    <p>Évènement réunissant les meilleurs élèves de chaque IUT
+                       de France dans un concours informatique durant 24h sans interruption.
+                    </p>
+                    <button onclick="togglepopup()">Afficher plus</button>
+
+                </div>
+                <div>
+                    <i class="fa-solid fa-code"></i> <i class="fa-solid fa-database"></i>
+                    <h2>Création d'une base de données</h2>
+                    <p>Création, peuplement et exploitation d’une base de donée.</p>
+                    <button onclick="togglepopup1()">Afficher plus</button>
+                </div>
+                <div>
+                    <h2>Creation d'un site web</h2>
+                    <p>Création d’un site web a partir d’échanges avec le clients pour 
+                       cerner ses besoins et l’accompagner au mieux dans la création de son site web.
+                    </p>
+                    <button onclick="togglepopup2()">Afficher plus</button>
+                </div>
+            </div>
+            <div class="overlay ">
+                <div class="contenupopup">
+                    <p><strong>Organisation des <a href="https://24hinfo.iut.fr" target="_blank">24h de l'Info</a> – IUT de Villetaneuse (2024)</strong><br><br>
+                        En tant qu’étudiant en BUT Informatique à l’IUT de Villetaneuse, j'ai eu l'opportunité, avec ma classe, d’être sélectionné pour organiser les <strong>24h de l'Info 2024</strong>, un événement majeur qui rassemble des étudiants en informatique de toute la France. Ce concours met en compétition des équipes sur des épreuves techniques comme la programmation, le développement web et la sécurité informatique.<br><br>
+                        J'ai été impliqué dans la planification, la coordination logistique et la gestion des participants, ce qui m'a permis de développer plusieurs compétences clés :<br><br>
+                        <strong>Gestion de projet :</strong> planification des étapes de l'événement, création de plannings, et supervision des délais.<br>
+                        <strong>Travail d'équipe et collaboration :</strong> travail avec d'autres étudiants et enseignants pour coordonner les différentes équipes et les parties prenantes.<br>
+                        <strong>Compétences organisationnelles :</strong> mise en place des espaces (réservation des salles, installation du matériel) et gestion des inscriptions des participants.<br>
+                        <strong>Communication :</strong> contact avec les participants, sponsors et partenaires, et création de supports de communication.<br>
+                        <strong>Gestion des imprévus :</strong> capacité à réagir rapidement pour résoudre les problèmes techniques et logistiques rencontrés durant les 24 heures.<br><br>
+                        Cette expérience immersive m'a permis de développer des compétences solides en gestion de projets complexes et m’a préparé à des responsabilités professionnelles futures dans le domaine de l’informatique et de la coordination événementielle.
+                        </p>
+                        <img src="ImagesPortfolio/affiche-evenement.png" alt="">
+                        
+                    <a href="javascript:void(0)" onclick="togglepopup()"  class="popupsortir">Fermer</a>
+                </div>
+            </div>
+
+            <div class="overlay2">
+                <div class="contenupopup">
+                    <p>Dans le cadre de ce projet, plusieurs compétences ont été développées :</p>
+                    <p><strong>1. Analyse de Données :</strong> Capacité à extraire, transformer et charger des données à partir de fichiers CSV vers une base de données.</p>
+                    <p><strong>2. SQL et Gestion des Bases de Données :</strong> Maîtrise des requêtes SQL pour manipuler et interroger les données efficacement.</p>
+                    <p><strong>3. Normalisation des Données :</strong> Compréhension des principes de normalisation pour éviter la redondance et garantir l'intégrité des données.</p>
+                    <p><strong>4. Utilisation de Tables Temporaires :</strong> Compétence dans la création et la gestion de tables temporaires pour organiser le flux de données.</p>
+                    <p><strong>5. Gestion des Conflits :</strong> Capacité à gérer les conflits d'insertion pour maintenir l'intégrité des données avec des clauses appropriées.</p>
+                    <a href="image base de données.pdf" class="CV bouton-cv" target="_blank">Image</a>
+                    <a href="RAPPORT SAE BASE DE DONNEE.pdf" class="CV bouton-cv" target="_blank">Rapport</a>
+                    <a href="script (1).pdf" class="CV bouton-cv" target="_blank">Script</a>
+
+                    <a href="javascript:void(0)" onclick="togglepopup1()"  class="popupsortir">Fermer</a>
+                </div>
+            </div>
+        
+            <div class="overlay3">
+                <div class="contenupopup">
+                    
+                    <ul>
+                        <p><strong>Création d'un site web :</strong> Création d’un site web à partir d’échanges réguliers 
+                    avec le client pour cerner ses besoins. J'ai proposé des solutions et des livrables adaptés pour assurer la meilleure réalisation du projet.</p>
+                        <li><strong>Gestion de projet :</strong> Planification et suivi des étapes du développement du site.</li>
+                        <li><strong>Communication client :</strong> Compréhension des besoins et ajustement des livrables en fonction des retours du client.</li>
+                        <li><strong>Développement web :</strong> Utilisation des technologies web pour créer un site fonctionnel et adapté.</li>
+                        <li><strong>Méthode Agile :</strong> Savoir m'adapter aux imprévus et ajuster le projet selon les besoins (livrables).</li>
+                    </ul>
+                    <a href="javascript:void(0)" onclick="togglepopup2()"  class="popupsortir">Fermer</a>
+                </div>
+            </div>
+
+    </section>
+    
+
+
+ <!--Experiences professionnelles-->
+ <section class="EXP" id="exp">
+    <h1 class="TitreEXP TITRE">Mes expériences professionnelles</h1>
+    <div class="conteneur">
+        <div class="listeEXP">
+            <div>
+                <h1>Livreur indépendant</h1>
+                <p>Travail de livraison en tant qu'indépendant pour diverses plateformes.</p>
+                <button onclick="togglepopupExp1()">Afficher plus</button>
+            </div>
+            <div>
+                <h1>Réparation électroniques</h1>
+                <p>Réparation de téléphones, ordinateurs et autres appareils électroniques.</p>
+                <button onclick="togglepopupExp2()">Afficher plus</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Popups pour expériences professionnelles -->
+    <div class="overlay-exp1">
+        <div class="contenupopup">
+            <p>Je travaille en tant que livreur indépendant pour diverses plateformes.</p>
+            <h3>Compétences acquises :</h3>
+            <ul>
+                <li><strong>Gestion du temps :</strong> J'ai optimisé mes horaires pour assurer des livraisons rapides et efficaces.</li>
+                <li><strong>Sens des responsabilités :</strong> J'ai pris en charge de manière autonome mes missions et j'ai appris à gérer mes erreurs personnelles.</li>
+                <li><strong>Relation client :</strong> J'ai développé ma capacité à gérer les interactions avec les clients pour garantir leur satisfaction.</li>
+                <li><strong>Organisation :</strong> J'ai su planifier et gérer plusieurs livraisons simultanément.</li>
+            </ul>
+            <a href="javascript:void(0)" onclick="togglepopupExp1()" class="popupsortir">Fermer</a>
+        </div>
+    </div>
+
+    <div class="overlay-exp2">
+        <div class="contenupopup">
+            <h2>Réparation Électroniques chez BESMART</h2>
+    <p>J'ai acquis une expérience précieuse dans la réparation de téléphones, ordinateurs et autres appareils électroniques. Ce travail m'a permis de développer des compétences techniques et pratiques essentielles.</p>
+    
+    <h3>Compétences Développées :</h3>
+    <ul>
+        <li><strong>Diagnostic Technique :</strong> J'identifie rapidement les problèmes matériels et logiciels.</li>
+        <li><strong>Connaissance des Technologies :</strong> Je me familiarise avec les dernières tendances en électronique.</li>
+        <li><strong>Résolution de Problèmes :</strong> J'ai appris a analyser et résoudre des problèmes complexes efficacement.</li>
+        <li><strong>Gestion des Stocks :</strong> J'appris a organiser les pièces détachées et les outils pour assurer un service rapide chez BESMART.</li>
+        <li><strong>Service Client :</strong> J'ai appris a interagir avec les clients pour comprendre leurs besoins et proposer des solutions adaptées.</li>
+        <li><strong>Montage d'Ordinateur :</strong> J'ai renforcé ma comprehension de l'utilité et des relations qu'ont chaque composant d'un Ordinateur.</li>
+        <li><strong>Compréhension des Besoins Clients :</strong> J'ai appris a écouter activement et poser les bonnes questions pour proposer des solutions .</li>
+
+        <h3>Compréhension des Besoins Clients :</h3>
+        <p>Comprendre le besoin du client est essentiel dans le processus de réparation. Cela implique d'écouter attentivement les préoccupations du client, d'évaluer le problème et de poser les bonnes questions pour cerner les attentes. 
+            Cette approche permet non seulement de proposer des solutions adaptées, mais aussi de garantir la satisfaction du client.</p>
+    
+    </ul>
+    <p>Cette expérience m'a aidé à développer des compétences techniques et relationnelles, ce qui m'a rendu plus à l'aise pour gérer des projets techniques.</p>
+
+            <a href="javascript:void(0)" onclick="togglepopupExp2()" class="popupsortir">Fermer</a>
+        </div>
+    </div>
+</section>
+
+
+
+<!---CONTACT-->   
+
+    <section class="contact" id="contact">
+        <div class="conteneur">
+            <div class="row">
+                <div class="contact-gauche">
+                    <h1 class="contact-titre">Contactez-moi</h1>
+                    <p><i class="fa-solid fa-envelope"></i> Dkonte95100@gmail.com</p>
+                    <p><i class="fa-solid fa-phone"></i> 0751458685</p>
+                    
+                    <div class="icone">
+                        <a href="https://www.linkedin.com/feed/" target="_blank">
+                            <i class="fa-brands fa-linkedin"></i> Linkedin
+                        </a>
+                    </div>
+                    <a href="ImagesPortfolio/DIARRA KONTE (3).pdf" class="CV bouton-cv" target="_blank">Télécharger CV</a>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+
+</body>    
+<script src="portfolio.js"></script>
+</html>
