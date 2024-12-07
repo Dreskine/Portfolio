@@ -1,496 +1,179 @@
-body {
-    font-family: Arial, sans-serif;
-    background-image: url("Documents/FF.png");
-    background-repeat: no-repeat;
-    background-position: top right;
+/* Media Queries Avancées pour Portfolio */
+
+/* Mobile - Extra Small Devices (jusqu'à 480px) */
+@media screen and (max-width: 480px) {
+    body {
+        font-size: 14px;
+    }
+
+    #entete {
+        height: auto;
+        padding: 10px 0;
+    }
+
+    .conteneur {
+        flex-direction: column;
+        padding: 5px;
+    }
+
+    .texte-entete {
+        margin-top: 10%;
+        text-align: center;
+    }
+
+    .texte-entete h1 {
+        font-size: 28px;
+    }
+
+    .nav-links {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .nav-links li {
+        margin: 8px 0;
+        text-align: center;
+    }
+
+    .liste-projet, .listeEXP {
+        grid-template-columns: 1fr;
+        grid-gap: 15px;
+    }
+
+    .liste-projet div, .listeEXP div {
+        padding: 20px;
+        font-size: 18px;
+    }
+
+    .contenupopup {
+        width: 95%;
+        padding: 10px;
+        max-height: 75vh;
+    }
+
+    .row {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+/* Small Tablets - Portrait (481px à 767px) */
+@media screen and (min-width: 481px) and (max-width: 767px) {
+    body {
+        font-size: 16px;
+    }
+
+    .conteneur {
+        padding: 10px;
+    }
+
+    .texte-entete h1 {
+        font-size: 36px;
+    }
+
+    .nav-links {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .nav-links li {
+        margin: 10px;
+    }
+
+    .liste-projet, .listeEXP {
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        grid-gap: 20px;
+    }
+
+    .titre {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .contenupopup {
+        width: 90%;
+        max-height: 70vh;
+    }
+}
+
+/* Tablets - Landscape & Small Desktops (768px à 1024px) */
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+    .conteneur {
+        padding: 15px;
+    }
+
+    .texte-entete h1 {
+        font-size: 42px;
+    }
+
+    .nav-links {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+
+    .nav-links li {
+        margin: 10px 15px;
+    }
+
+    .liste-projet, .listeEXP {
+        grid-template-columns: repeat(2, 1fr);
+        grid-gap: 25px;
+    }
+
+    .apcol2 {
+        max-width: 90%;
+        margin: 0 auto;
+    }
+
+    .contenupopup {
+        width: 85%;
+        max-height: 65vh;
+    }
+}
+
+/* Large Tablets & Small Laptops (1025px à 1440px) */
+@media screen and (min-width: 1025px) and (max-width: 1440px) {
+    .conteneur {
+        padding: 20px;
+    }
+
+    .nav-links li {
+        margin: 0 20px;
+    }
+
+    .liste-projet, .listeEXP {
+        grid-template-columns: repeat(3, 1fr);
+        grid-gap: 30px;
+    }
+
+    .apcol2 {
+        max-width: 900px;
+    }
+}
+
+/* High Resolution Displays (1441px et plus) */
+@media screen and (min-width: 1441px) {
+    .conteneur {
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+
+    .liste-projet, .listeEXP {
+        grid-template-columns: repeat(4, 1fr);
+        grid-gap: 40px;
+    }
+}
+
+/* Orientations Spécifiques */
+@media screen and (max-height: 500px) and (orientation: landscape) {
+    #entete {
+        height: auto;
+    }
+
+    .texte-entete {
+        margin-top: 5%;
+    }
 }
-
-html {
-    scroll-behavior: smooth;
-}
-
-a {
-    text-decoration: none;
-}
-
-/*=== Show menu ===*/
-.show {
-    right: 0;
-  }
-  
-
-.no-scroll {
-    overflow: hidden;
-}
-
-#entete {
-    height: 80vh; 
-    width: 100%;
-    padding: 20px 0; 
-}
-
-.conteneur {
-    padding: 10px 10%;
-    font-size: 20px;
-    display: flex;
-}
-
-.navbarre {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    position: fixed;
-    background-color: #F5F5F5;
-    border-radius: 15px;
-    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.15);
-    z-index: 1000;
-}
-
-.navbarre .Portfolio {
-    font-size: 60px;
-    font-weight: bold;
-    color: rgb(41, 130, 207);
-}
-
-
-.nav-links li {
-    margin: 10px 25px;
-    font-weight: bold;
-    list-style: none;
-    display: inline-block;
-    transition: 0.3s;
-}
-
-.nav-links li:hover {
-    color: rgb(41, 130, 207);
-    transform: scale(1.1);
-}
-
-.navbarre .nav-links li a {
-    color: black;
-    font-size: 20px;
-}
-
-.texte-entete {
-    margin-top: 15%;
-    font-size: 25px;
-}
-
-.texte-entete p {
-    font-weight: bold;
-}
-
-.texte-entete h1 {
-    font-size: 50px;
-    margin-top: 20px;
-}
-
-.texte-entete h1 span {
-    color: royalblue;
-}
-
-
-
-
-/* A PROPOS DE MOI*/
-.apropos {
-    padding: 50px 0;
-    margin-bottom: 20px;
-    background-color: #ffffff;
-    text-align: center;
-}
-
-.TITREAPROPOS{
-    text-decoration: underline;
-    color: #007BFF;
-}
-
-.overlayMOI{
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-color: rgba(0, 0, 0, 0.7);
-    display: none;
-}
-
-.overlayMOI.open{
-    display: block !important;
-}
-
-.Fermer{
-    background: rgb(146, 181, 212);
-}
-
-.overlayMOI p {
-    text-align: justify;
-    
-}
-
-.apcol2 {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    max-width: 800px;
-    margin: 0 auto;
-}
-
-.apcol2 .Sorbonne{
-    color: royalblue;
-}
-
-.conteneur {
-    justify-content: space-between;
-}
-
-.description {
-    font-size: 30px;
-}
-
-
-.titre {
-    display: flex;
-    justify-content: center; 
-    gap: 60px; 
-    margin-bottom: 20px;
-}
-
-.Titre-lien{
-    text-align: center;
-}
-
-.Titre-lien {
-    text-align: center;
-    margin-right: 60px;
-    font-weight: 600;
-    font-size: 20px;
-    cursor: pointer;
-    transition: 0.3s;
-    color: black;
-}
-
-.Titre-lien:hover {
-    transform: scale(1.2);
-    color: rgb(41, 130, 207);
-    border-bottom: 2px solid rgb(41, 130, 207); /* Soulignement au survol */
-}
-
-.contenu-titre ul li {
-    list-style: none;
-    margin: 40px 0;
-}
-
-.contenu-titre ul li .P-span {
-    color: rgb(41, 130, 207);
-    font-weight: 600;
-    font-size: 25px;
-}
-
-.contenu-titre ul li .Second-span {
-    font-weight: 600;
-    font-size: 20px;
-}
-
-.contenu-titre {
-    display: none;
-}
-
-.contenu-titre.contenu-actif {
-    display: block;
-}
-
-
-.Titre-lien.lien-actif {
-    color: rgb(41, 130, 207);
-    border-bottom: 2px solid rgb(41, 130, 207); 
-}
-
-
-
-/* PROJET*/
-#projets {
-    margin: 100px 0;
-    margin-top: -100px;
-    background-color: #ffffff;
-    align-items: center;
-    padding: 50px 10%;
-}
-
-.Projet-Titre {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    margin-bottom: 20px;
-    text-decoration: underline;
-    color: #007BFF;
-}
-
-.liste-projet {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    grid-gap: 40px;
-    margin-top: 50px;
-}
-
-.liste-projet div a {
-    color: rgb(41, 130, 207);
-}
-
-.liste-projet div {
-    background: rgb(228, 228, 236);
-    padding: 40px;
-    font-size: 23px;
-    font-weight: 300;
-    border-radius: 20px;
-    transition: background 0.5s, transform 0.5s;
-}
-
-.liste-projet div:hover {
-    background: skyblue;
-    transform: translateY(-10px);
-}
-
-.overlay{
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-color: rgba(0, 0, 0, 0.7);
-    display: none;
-}
-
-.overlay2{
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-color: rgba(0, 0, 0, 0.7);
-    display: none;
-}
-
-.overlay3{
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-color: rgba(0, 0, 0, 0.7);
-    display: none;
-}
-
-.overlay.open{
-    display: block !important;
-}
-
-.overlay2.open{
-    display: block !important;
-}
-
-.overlay3.open{
-    display: block !important;
-}
-
-.contenupopup {
-    max-width: 800px;
-    width: 100%;
-    max-height: 60vh; 
-    padding: 30px;
-    box-sizing: border-box;
-    background: #ffffff;
-    position: absolute; 
-    top: 50%; 
-    left: 50%; 
-    transform: translate(-50%, -50%);
-    border-radius: 20px;
-    overflow-y: scroll;
-}
-
-.overlay img{
-    width: 50%;
-    align-items: center;
-}
-
-.popupsortir{
-    position: absolute;
-    top: 10px;
-    right: 10px;
-    color: #F5F5F5;
-    background: rgb(146, 181, 212);
-    padding: 5px 10px;
-    border-radius: 5px;
-}
-
-button {
-    background-color: #007BFF; 
-    color: #fff; 
-    padding: 10px 20px; 
-    border: none; 
-    border-radius: 5px; 
-    cursor: pointer; 
-    font-size: 16px; 
-    transition: background-color 0.3s, transform 0.3s; 
-}
-
-button:hover {
-    background-color: #2d7dd3; 
-    transform: scale(1.05); 
-}
-
-.contenupopup img {
-    max-width: 80%;  /* Ajustez ce pourcentage selon vos besoins */
-    height: auto;    /* Maintenir le ratio d'aspect */
-    margin: 10px 0;  /* Espace autour des images */
-}
-
-/*EXP*/
-.EXP{
-    margin: 100px 0;
-    margin-top: -100px;
-    background-color: #ffffff;
-    align-items: center;
-    padding: 30px 10%;
-}
-.TitreEXP{
-    text-align: center;
-    text-decoration: underline;
-    color: #007BFF;
-}
-
-.listeEXP{
-    display: flex;
-    display: grip;
-    padding: 20px;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    grid-gap: 40px;
-    
-}
-
-
-
-.listeEXP div{
-    background: rgb(228, 228, 236);
-    padding: 40px;
-    font-weight:100;
-    border-radius: 20px;
-    transition: background 0.5s, transform 0.5s;
-    
-}
-
-.listeEXP div:hover{
-    background: skyblue;
-    transform: translateY(-10px);
-}
-
-
-/* Popups pour Expériences Professionnelles */
-.overlay-exp1,
-.overlay-exp2 {
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-color: rgba(0, 0, 0, 0.7);
-    display: none;
-}
-
-.overlay-exp1.open,
-.overlay-exp2.open {
-    display: block !important;
-}
-
-.contenupopup {
-    max-width: 800px;
-    width: 100%;
-    max-height: 60vh;
-    padding: 30px;
-    box-sizing: border-box;
-    background: #ffffff;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    border-radius: 20px;
-    overflow-y: scroll;
-}
-
-.popupsortir {
-    position: absolute;
-    top: 10px;
-    right: 10px;
-    color: #F5F5F5;
-    background: rgb(146, 181, 212);
-    padding: 5px 10px;
-    border-radius: 5px;
-}
-
-
-/* CONTACT*/
-
-.contact {
-    display: flex;
-    justify-content: center; /* Centrer la section contact */
-    padding: 30px 0; 
-    margin-top: 30px; 
-}
-
-.contact-titre{
-    text-decoration: underline;
-    color: #007BFF;
-}
-
-.row {
-    display: flex;
-    justify-content: space-between;
-    margin: auto;
-    align-items: flex;
-    padding: 20px;
-    background-color: white;
-    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
-}
-.contact-gauche {
-    flex-basis: 30%; 
-    margin-right: 20px; 
-}
-
-.bouton-cv{
-    padding: 10px;
-    border-radius: 5px;
-    background-color: rgb(146, 181, 212);
-    border: none;
-    color: white;
-    cursor: pointer;
-    transition: background-color 0.3s;
-}
-
-.bouton-cv:hover{
-    background-color: rgb(41, 130, 207);
-}
-
-.contact-gauche a {
-    display: block; 
-    margin-top: 10px; 
-}
-
-.icone a {
-    color: rgb(146, 181, 212) ;
-    transition: background-color 0.3s;
-}
-
-.icone a:hover{
-    color: rgb(41, 130, 207);
-}
-
-
-
-
-
-
-
-
